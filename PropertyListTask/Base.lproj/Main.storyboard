@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5bJ-n8-gaI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Content Entry View Controller-->
+        <scene sceneID="ahq-3k-qgn">
+            <objects>
+                <viewController id="LDR-lk-gpd" customClass="ContentEntryViewController" customModule="PropertyListTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u92-BF-EVe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEb-F3-Rao">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Change File" id="xW2-81-xT5">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="WKG-70-Fxe">
+                                            <connections>
+                                                <action selector="saveButtonTapped:" destination="LDR-lk-gpd" id="jNe-3g-W2v"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Show" id="ua5-5f-tO6">
+                                            <connections>
+                                                <segue destination="WhV-p0-H50" kind="show" id="uPN-cH-PwU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="grh-HA-kjx">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please replace text with your favorite food. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-QB-EpV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                        <color key="backgroundColor" red="0.21537571829999999" green="1" blue="0.1677859887" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please replace text with your favorite movie.  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eZN-f8-26l">
+                                        <rect key="frame" x="0.0" y="186.5" width="375" height="186"/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please replace text with your favorite book.  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HFX-PN-E4g">
+                                        <rect key="frame" x="0.0" y="372.5" width="375" height="186.5"/>
+                                        <color key="backgroundColor" red="0.99691427610000005" green="0.35216162429999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vEb-F3-Rao" firstAttribute="leading" secondItem="Fel-G7-F7B" secondAttribute="leading" id="BLz-gN-q6p"/>
+                            <constraint firstItem="Fel-G7-F7B" firstAttribute="bottom" secondItem="grh-HA-kjx" secondAttribute="bottom" id="LeA-rV-Kta"/>
+                            <constraint firstItem="vEb-F3-Rao" firstAttribute="trailing" secondItem="Fel-G7-F7B" secondAttribute="trailing" id="bcV-dl-8ou"/>
+                            <constraint firstItem="Fel-G7-F7B" firstAttribute="trailing" secondItem="grh-HA-kjx" secondAttribute="trailing" id="gYb-h1-KwH"/>
+                            <constraint firstItem="grh-HA-kjx" firstAttribute="top" secondItem="vEb-F3-Rao" secondAttribute="bottom" id="qct-FK-5SX"/>
+                            <constraint firstItem="vEb-F3-Rao" firstAttribute="top" secondItem="Fel-G7-F7B" secondAttribute="top" id="uCO-B1-122"/>
+                            <constraint firstItem="grh-HA-kjx" firstAttribute="leading" secondItem="Fel-G7-F7B" secondAttribute="leading" id="xFh-1M-lq8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fel-G7-F7B"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hg0-JW-ys9"/>
+                    <connections>
+                        <outlet property="favoriteBookTextView" destination="HFX-PN-E4g" id="M9c-Az-z7M"/>
+                        <outlet property="favoriteFoodTextView" destination="fxe-QB-EpV" id="EU1-rQ-IFB"/>
+                        <outlet property="favoriteMovieTextView" destination="eZN-f8-26l" id="ZmL-ha-LYj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2C-aF-7lq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="24.7376311844078"/>
+        </scene>
+        <!--Saved Content View Controller-->
+        <scene sceneID="YNB-uu-wjr">
+            <objects>
+                <viewController id="WhV-p0-H50" customClass="SavedContentViewController" customModule="PropertyListTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="38F-kv-uaA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DCY-C8-hht"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNR-kM-HbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OuF-K7-7hT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bJ-n8-gaI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6XX-ce-dxz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LDR-lk-gpd" kind="relationship" relationship="rootViewController" id="o1J-R4-cvM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcP-Ms-vrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="25"/>
+        </scene>
+    </scenes>
+</document>
