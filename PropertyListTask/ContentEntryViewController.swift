@@ -14,7 +14,6 @@ class ContentEntryViewController: UIViewController {
     
     @IBOutlet weak var showButton: UIBarButtonItem!
     
-    
     let plistManager = PlistManager()
     
     // favorite stores the data we read and allows us to append it.

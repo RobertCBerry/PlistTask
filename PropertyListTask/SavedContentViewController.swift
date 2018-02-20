@@ -22,7 +22,6 @@ class SavedContentViewController: UIViewController {
     
     // Function that will be called in the viewDidLoad to set the properties for the class according to the property list.
 
-    
     func readPropertyList() {
         
         // Code states that the property list is in the xml format.
