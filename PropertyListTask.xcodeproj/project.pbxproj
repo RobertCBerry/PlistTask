@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D216D2DA2036105F00E4DA24 /* SavedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216D2D92036105F00E4DA24 /* SavedContentViewController.swift */; };
+		D216D33C203BB36B00E4DA24 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216D33B203BB36B00E4DA24 /* PlistManager.swift */; };
 		D21CCC0D202D0214009F1D16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CCC0C202D0214009F1D16 /* AppDelegate.swift */; };
 		D21CCC12202D0214009F1D16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21CCC10202D0214009F1D16 /* Main.storyboard */; };
 		D21CCC14202D0214009F1D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21CCC13202D0214009F1D16 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		D216D2D92036105F00E4DA24 /* SavedContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedContentViewController.swift; sourceTree = "<group>"; };
+		D216D33B203BB36B00E4DA24 /* PlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
 		D21CCC09202D0214009F1D16 /* PropertyListTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropertyListTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21CCC0C202D0214009F1D16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D21CCC11202D0214009F1D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				D21CCC0C202D0214009F1D16 /* AppDelegate.swift */,
-				D216D2D92036105F00E4DA24 /* SavedContentViewController.swift */,
 				D2AD033520360293001B08C1 /* ContentEntryViewController.swift */,
+				D216D33B203BB36B00E4DA24 /* PlistManager.swift */,
+				D216D2D92036105F00E4DA24 /* SavedContentViewController.swift */,
 				D21CCC10202D0214009F1D16 /* Main.storyboard */,
 				D21CCC13202D0214009F1D16 /* Assets.xcassets */,
 				D21CCC15202D0214009F1D16 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D216D33C203BB36B00E4DA24 /* PlistManager.swift in Sources */,
 				D216D2DA2036105F00E4DA24 /* SavedContentViewController.swift in Sources */,
 				D2AD03372036046D001B08C1 /* ContentEntryViewController.swift in Sources */,
 				D21CCC0D202D0214009F1D16 /* AppDelegate.swift in Sources */,

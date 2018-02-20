@@ -29,7 +29,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Show" id="ua5-5f-tO6">
                                             <connections>
-                                                <segue destination="WhV-p0-H50" kind="show" id="uPN-cH-PwU"/>
+                                                <segue destination="WhV-p0-H50" kind="show" id="6zh-hD-xuS"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -76,6 +76,7 @@
                         <outlet property="favoriteBookTextView" destination="HFX-PN-E4g" id="M9c-Az-z7M"/>
                         <outlet property="favoriteFoodTextView" destination="fxe-QB-EpV" id="EU1-rQ-IFB"/>
                         <outlet property="favoriteMovieTextView" destination="eZN-f8-26l" id="ZmL-ha-LYj"/>
+                        <outlet property="showButton" destination="ua5-5f-tO6" id="uio-gG-2EE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U2C-aF-7lq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,13 +90,52 @@
                     <view key="view" contentMode="scaleToFill" id="38F-kv-uaA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kQB-wa-7bd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dG6-h4-grG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                        <color key="backgroundColor" red="0.21537571829999999" green="1" blue="0.1677859887" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tDo-aH-a2f">
+                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cjo-xX-M4M">
+                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
+                                        <color key="backgroundColor" red="0.99691427610000005" green="0.35216162429999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DCY-C8-hht" firstAttribute="trailing" secondItem="kQB-wa-7bd" secondAttribute="trailing" id="1RW-SK-fsJ"/>
+                            <constraint firstItem="kQB-wa-7bd" firstAttribute="bottom" secondItem="DCY-C8-hht" secondAttribute="bottom" id="SGF-zi-6y9"/>
+                            <constraint firstItem="kQB-wa-7bd" firstAttribute="leading" secondItem="DCY-C8-hht" secondAttribute="leading" id="eoc-8P-rl0"/>
+                            <constraint firstItem="kQB-wa-7bd" firstAttribute="top" secondItem="DCY-C8-hht" secondAttribute="top" id="nzY-It-8qb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DCY-C8-hht"/>
                     </view>
+                    <connections>
+                        <outlet property="savedBookTextView" destination="cjo-xX-M4M" id="Yfv-g3-fXQ"/>
+                        <outlet property="savedFoodTextView" destination="dG6-h4-grG" id="9IB-qX-5GG"/>
+                        <outlet property="savedMovieTextView" destination="tDo-aH-a2f" id="aC4-1m-fwg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNR-kM-HbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="25"/>
+            <point key="canvasLocation" x="1181.5999999999999" y="24.7376311844078"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OuF-K7-7hT">
